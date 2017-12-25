@@ -1,0 +1,34 @@
+Steps to install MySQL on Ubuntu (or) cli mode
+..............................................
+
+1.  Open terminal (or) ctrl+alt+t
+
+2.  First of all update the software services before installing MySQL
+    sudo apt-get update;
+
+3.  To install MySQL 5.7
+    sudo apt-get install mysql-server-5.7.18;
+    It asks root password. Please enter the root password.
+
+4.  To login MySQL
+    mysql -u root -p
+
+5.  To show databases
+    show databases;
+
+6.  To exit (or) comeout from MySQL shell
+    quit
+
+7.  To restart MySQL services from root (or) main user
+    sudo service mysql restart;
+
+8.  To start MySQL services from root (or) main user
+    sudo service mysql start;
+
+9.  To stop MySQL services from root (or) main user
+    sudo service mysql stop;
+
+10. To check the current status of MySQL from root (or) main user
+    sudo service mysql status;
+
+
