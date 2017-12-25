@@ -1,0 +1,46 @@
+
+Task 1
+
+Find all the transaction where amt>160
+
+===================================================================================
+
+Task 2
+
+Count all the transaction where amt>160
+
+===================================================================================
+
+Task 3
+
+Calculate the total sum and total count of all the transaction for each user.
+
+===================================================================================
+
+Task 4
+
+Calculate total sales amt for each Month
+
+===================================================================================
+
+Task 5 
+
+Divide the file into 12 files, each file containing each month of data. For eg. file 1 should contain data of january txn, file 2 should contain data of feb txn.
+
+===================================================================================
+
+Task 6 
+
+Sort the whole file on the basis of amt.
+
+===================================================================================
+
+Task 7 
+
+Find the top spender user.
+
+===================================================================================
+
+
+
+
