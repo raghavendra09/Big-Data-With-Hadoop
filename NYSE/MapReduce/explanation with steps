@@ -1,0 +1,42 @@
+1. Open eclipse and give path has /home/hduser/workspace
+
+2. Click on file->New->Java Project->Give Project Name "NYSE"->Finish
+
+3. For importing hdfs,common,mapreduce jar files
+   
+   Right click on Project Name
+   -> Select new class and specify the class name has "NYSEInput" and click "OK" followed by "Finish"
+   -> Type the MapReduce Code in class file. You will get some errors such as you doesnot have jar files to import.
+   -> Right click on "src" and select "build path" followed by "configure build path". Select "Libraries" followed by "Add External JARS". Where you   
+      will find "Places", In that select "File System" then "user" then "local" then "hadoop" then "share" then "hadoop" followed by "common" and add 
+      the three jar files. Come back to "hadoop" and goto "hdfs" then add three jar files. Come back to "hadoop" and goto "mapreduce" and select all 
+      the jar files present in it and press "ok".
+   -> You can check whether the jar files of hadoop such as present in common, hdfs and mapreduce by inside the project window there will be 
+      Referenced Libraries.
+ 
+4. For exporting the JAR File
+
+   Right click on the project
+   -> Select export->click on "java" and select "JAR" file-> click next-> select the export destination:
+      JAR file: /home/hduser/nyse.jar
+   -> Finish
+
+5. In Terminal
+       
+        -> Inorder to list the jar file
+                ls nyse.jar
+        -> Inorder to list the hadoop file system of niit         
+                hadoop fs -ls /niit
+        -> Inorder to make a directory in hadoop file system
+                hadoop fs -mkdir /niit /nyse
+        -> Inorder to move a directory from hadoop file system
+                hadoop fs -mv /niit /NYSE.csv 
+        -> Inorder to put NYSE.csv in hadoop file system
+                hadoop fs -put /home/hduser/Downloads/NYSE.csv /
+        -> Inorder to get output for nyse files
+                hadoop jar nyse.jar NYSEInput /NYSE.csv /outputfornyse
+        -> Inorder to display the output for nyse file           
+                hadoop fs -cat /outputfornyse/p*
+        -> Inorder to check the output stored in hdfs or not          
+                http://localhost:50070/explorer.html#/
+
